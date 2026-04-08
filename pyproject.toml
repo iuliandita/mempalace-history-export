@@ -1,0 +1,23 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mempalace-history-export"
+version = "0.2.0"
+description = "Export Codex, Claude, and OpenCode project sessions into MemPalace-friendly transcripts."
+readme = "README.md"
+requires-python = ">=3.11"
+authors = [
+  { name = "iuliandita", email = "iulian.dita@gmail.com" },
+]
+dependencies = []
+
+[project.scripts]
+mempalace-history-export = "mempalace_history_export.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
